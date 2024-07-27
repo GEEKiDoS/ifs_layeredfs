@@ -10,6 +10,7 @@ typedef struct {
     bool developer_mode;
     bool disable;
     const char *logfile;
+    const char *laochan_data_dir;
     std::set<std::string, CaseInsensitiveCompare> allowlist;
     std::set<std::string, CaseInsensitiveCompare> blocklist;
 } config_t;

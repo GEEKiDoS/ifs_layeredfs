@@ -18,7 +18,7 @@ size_t hook_avs_fs_read(AVS_FILE context, void* bytes, size_t nbytes);
 string_set list_pngs(string const&folder);
 
 extern "C" {
-    __declspec(dllexport) int init(void);
+    __declspec(dllexport) int init(const char* data_dir);
     extern HMODULE my_module;
 }
 

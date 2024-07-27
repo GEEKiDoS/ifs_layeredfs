@@ -19,7 +19,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     if (GetModuleFileNameA(my_module, dll_filename, MAX_PATH)) {
       dll_time = file_time(dll_filename);
     }
-    return init() == 0;
+    return init(nullptr) == 0;
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
     case DLL_PROCESS_DETACH:

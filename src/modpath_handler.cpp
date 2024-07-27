@@ -64,6 +64,10 @@ void cache_mods(void) {
     auto avail_mods = available_mods();
     config.developer_mode = devmode;
 
+    if (config.laochan_data_dir) {
+        avail_mods.push_back(config.laochan_data_dir);
+    }
+
     for (auto &dir : avail_mods) {
         log_verbose("Walking %s", dir.c_str());
         mod_contents_t mod;

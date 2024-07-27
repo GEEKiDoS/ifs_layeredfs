@@ -303,7 +303,7 @@ int main(int argc, char** argv) {
     boot_avs();
 #endif
 
-    init(); // this double-hooks some AVS funcs, don't care
+    init(nullptr); // this double-hooks some AVS funcs, don't care
 
     avs_playpen();
 

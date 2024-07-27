@@ -432,11 +432,12 @@ unsigned int hook_pkfs_open(const char *name) {
 }
 
 extern "C" {
-    __declspec(dllexport) int init(void) {
+    __declspec(dllexport) int init(const char *data_dir) {
         // all logs up until init_avs succeeds will go to a file for debugging purposes
 
         // find out where we're logging to
         load_config();
+        config.laochan_data_dir = data_dir;
 
         if (MH_Initialize() != MH_OK) {
             log_fatal("Couldn't initialize MinHook");
